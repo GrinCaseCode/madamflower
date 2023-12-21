@@ -1,0 +1,103 @@
+@font-face {
+	font-family: 'Mulish';
+	src: local('Mulish Regular'), local('Mulish-Regular'),
+	url('../fonts/Mulish-Regular.woff2') format('woff2'),
+	url('../fonts/Mulish-Regular.woff') format('woff'),
+	url('../fonts/Mulish-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Mulish';
+	src: local('Mulish Medium'), local('Mulish-Medium'),
+	url('../fonts/Mulish-Medium.woff2') format('woff2'),
+	url('../fonts/Mulish-Medium.woff') format('woff'),
+	url('../fonts/Mulish-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Mulish';
+	src: local('Mulish SemiBold'), local('Mulish-SemiBold'),
+	url('../fonts/Mulish-SemiBold.woff2') format('woff2'),
+	url('../fonts/Mulish-SemiBold.woff') format('woff'),
+	url('../fonts/Mulish-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Mulish';
+	src: local('Mulish Bold'), local('Mulish-Bold'),
+	url('../fonts/Mulish-Bold.woff2') format('woff2'),
+	url('../fonts/Mulish-Bold.woff') format('woff'),
+	url('../fonts/Mulish-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mulish';
+	src: local('Mulish Extra Bold'), local('Mulish-Extra-Bold'),
+	url('../fonts/Mulish-ExtraBold.woff2') format('woff2'),
+	url('../fonts/Mulish-ExtraBold.woff') format('woff'),
+	url('../fonts/Mulish-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mulish';
+	src: local('Mulish-Black'), local('Mulish-Black'),
+	url('../fonts/Mulish-Black.woff2') format('woff2'),
+	url('../fonts/Mulish-Black.woff') format('woff'),
+	url('../fonts/Mulish-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: local('Playfair Display Regular'), local('Playfair-Display-Regular'),
+	url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+	url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+	url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Playfair Display';
+	src: local('Playfair Display Bold'), local('PlayfairDisplay-Medium'),
+	url('../fonts/PlayfairDisplay-Medium.woff2') format('woff2'),
+	url('../fonts/PlayfairDisplay-Medium.woff') format('woff'),
+	url('../fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Playfair Display';
+	src: local('PlayfairDisplay-SemiBold'), local('PlayfairDisplay-SemiBold'),
+	url('../fonts/PlayfairDisplay-SemiBold.woff2') format('woff2'),
+	url('../fonts/PlayfairDisplay-SemiBold.woff') format('woff'),
+	url('../fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Playfair Display';
+	src: local('Playfair Display Bold'), local('Playfair-Display-Bold'),
+	url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+	url('../fonts/PlayfairDisplay-Bold.woff') format('woff'),
+	url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('../fonts/PlayfairDisplay-Black.eot');
+	src: url('../fonts/PlayfairDisplay-Black.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PlayfairDisplay-Black.woff') format('woff'),
+	url('../fonts/PlayfairDisplay-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
