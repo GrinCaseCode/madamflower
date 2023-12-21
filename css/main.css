@@ -904,7 +904,7 @@ form {
 	position: relative;
 }
 .checkbox_card label {
-	width: 100%;
+	width: 100%; 
 	display: block;
 }
 .checkbox_card label > span:before,
