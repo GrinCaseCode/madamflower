@@ -468,6 +468,7 @@ letter-spacing: 0.78px;
 .tabs {
     padding-bottom: 10px;
     white-space: nowrap;
+    padding-right: 15px;
     margin-right: -15px;
     overflow: auto;
 }
