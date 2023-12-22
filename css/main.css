@@ -90,7 +90,7 @@ form {
 }
 
 .header {
-	padding: 15px 0;
+	padding: 55px 0;
 	font-size: 14px;
 	line-height: 140%;
 	font-weight: 500;
@@ -102,12 +102,10 @@ form {
 	transition: all 0.5s;
 }
 .header.fixed {
-	padding: 10px 0;
+	padding: 15px 0;
 	background: #e1e1df;
 }
-.header.fixed .logo img {
-    width: 110px;
-}
+
 .header.nav-up {
 	transform: translateY(-135px);
 	box-shadow: none;
@@ -117,6 +115,21 @@ form {
 }
 .logo {
 	display: inline-block;
+}
+.header .logo {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: 1.4px;
+	text-transform: uppercase;
+	color: #000;
+}
+.header .logo img {
+	width: 243px;
+}
+.header .logo span {
+	margin-top: 14px;
+	display: block;
 }
 .logo img {
 	width: 159px;
@@ -1025,4 +1038,47 @@ form {
 	height: 450px;
 	display: block;
 	width: 100%;
+}
+.phone-mobile {
+	display: none;
+}
+.header .container {
+	position: relative;
+}
+.menu-dropdown {
+	padding: 25px;
+	font-size: 14px;
+	width: 800px;
+	margin-top: 15px;
+	line-height: 140%;
+	color: #000;
+	top: 100%;
+	left: 15px;
+	background: #e1e1df;
+	position: absolute;
+	display: none;
+}
+.list-nav li {
+	margin-bottom: 10px;
+}
+.list-nav a {
+	border-bottom: 1px transparent solid;
+	color: #000;
+}
+.list-nav a:hover {
+	border-color: #000;
+}
+.title-menu {
+	font-size: 16px;
+	margin-bottom: 12px;
+	font-weight: 700;
+}
+.menu-dropdown p a {
+	color: #000;
+}
+.menu-dropdown p {
+	margin-bottom: 11px;
+}
+.menu-overlay {
+	display: none;
 }

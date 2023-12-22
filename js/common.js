@@ -29,6 +29,12 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('.header').removeClass('nav-down').addClass('nav-up');
+		{
+        	if ($(window).width() > 992) { 
+        		$(".menu-dropdown").slideUp(200);
+			$(".sandwich").removeClass("active");
+        	}
+        }
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
@@ -64,12 +70,40 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 	//кнопка sandwich
 	$(".sandwich").click(function() {
 		$(this).toggleClass("active");
-		if ($(".menu-mobile").is(":hidden")) {
-			$(".menu-mobile").slideDown(200);
+		if ($(".menu-dropdown").is(":hidden")) {
+			$(".menu-dropdown").slideDown(200);
+			$(".sandwich").addClass("active");
+			$(".menu-overlay").fadeIn(200);
+			$(".header").addClass("active");
 		} else {
-			$(".menu-mobile").slideUp(200);
+			$(".menu-dropdown").slideUp(200);
+			$(".sandwich").removeClass("active");
+			$(".menu-overlay").fadeOut(200);
+			$(".header").removeClass("active");
 		}
 	});
+
+	$(".menu-overlay").click(function() {
+		$(".menu-dropdown").slideUp(200);
+			$(".sandwich").removeClass("active");
+			$(".menu-overlay").fadeOut(200);
+			$(".header").removeClass("active");
+	});
+
+	{
+		if ($(window).width() > 992) { 
+			$(document).mouseup(function (e) {
+				var container = $(".menu-dropdown");
+				if (container.has(e.target).length === 0){
+					$(".menu-dropdown").slideUp(200);
+					$(".sandwich").removeClass("active");
+					$(".menu-overlay").fadeOut(200);
+					$(".header").removeClass("active");
+				}
+			});
+		
+		}
+	}	
 
 	$(".btn-like").click(function(e) {
 		e.preventDefault();
@@ -90,7 +124,18 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		slidesToScroll: 1,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="far fa-arrow-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="far fa-arrow-right"></i><div/>',
-	});
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					dots: true,
+					arrows: false
+				}
+			}
+			]
+		});
 
 	$('.item-catalog__slider').slick({
 		arrows: false,
