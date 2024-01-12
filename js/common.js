@@ -1,6 +1,6 @@
-/*
-$(document).ready(function() {
 
+$(document).ready(function() {
+/*
 	var stopVideos = function () {
 		var videos = document.querySelectorAll('iframe, video');
 		Array.prototype.forEach.call(videos, function (video) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
 			}
 		});
 	};
-
+*/
 
 
 
@@ -258,7 +258,7 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 
 
 
-*/
+
   players = new Array();
 
   function onYouTubeIframeAPIReady() {
