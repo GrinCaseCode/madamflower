@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
 
 	<link rel="stylesheet" href="libs/ion.rangeSlider-master/css/ion.rangeSlider.min.css" />
-	<link rel="stylesheet" href="libs/modal-video/modal-video.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
@@ -206,7 +205,21 @@
 						</a>
 					</div>
 				</div>
-				<ul class="slider-gallery" id="list">
+				<ul class="image-grid" id="list">
+					<li>
+						<iframe class="yt_players" id="player0" width="385" height="230" src="http://www.youtube.com/embed/erDxb4IkgjM?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0"
+						frameborder="0" allowfullscreen></iframe>
+					</li>
+					<li>
+						<iframe class="yt_players" id="player1" width="385" height="230" src="http://www.youtube.com/embed/wSrA5iQGlDc?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0"
+						frameborder="0" allowfullscreen></iframe>
+					</li>
+					<li>
+						<iframe class="yt_players" id="player2" width="385" height="230" src="http://www.youtube.com/embed/c7b_WLkztXc?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0"
+						frameborder="0" allowfullscreen></iframe>
+					</li>
+				</ul>
+				<ul class="slider-gallery">
 					<li>
 						<iframe class="yt_players" id="player0" width="385" height="230" src="http://www.youtube.com/embed/bTqVqk7FSmY?rel=0&wmode=Opaque&enablejsapi=1;showinfo=0;controls=0"
 						frameborder="0" allowfullscreen></iframe>
@@ -2934,40 +2947,7 @@
 	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
 	<script type="text/javascript" src="http://www.youtube.com/player_api"></script>
-	<script>
-		players = new Array();
-
-function onYouTubeIframeAPIReady() {
-	var temp = $("iframe.yt_players");
-	for (var i = 0; i < temp.length; i++) {
-		var t = new YT.Player($(temp[i]).attr('id'), {
-			events: {
-				'onStateChange': onPlayerStateChange
-			}
-		});
-		players.push(t);
-	}
-
-}
-onYouTubeIframeAPIReady();
-
-
-function onPlayerStateChange(event) {
-
-	if (event.data == YT.PlayerState.PLAYING) {
-		//alert(event.target.getVideoUrl());
-	   // alert(players[0].getVideoUrl());
-		var temp = event.target.getVideoUrl();
-		var tempPlayers = $("iframe.yt_players");
-		for (var i = 0; i < players.length; i++) {
-			if (players[i].getVideoUrl() != temp) players[i].stopVideo();
-
-		}
-	}
-}
-	</script>
 	<script src="libs/ion.rangeSlider-master/js/ion.rangeSlider.min.js"></script>
-	<script src="libs/modal-video/jquery-modal-video.min.js"></script>
 	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
 	<script src="js/common.js?ver=1.2"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
