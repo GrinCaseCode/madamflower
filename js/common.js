@@ -277,7 +277,7 @@ function onPlayerStateChange(event) {
 	   // alert(players[0].getVideoUrl());
 		var temp = event.target.getVideoUrl();
 		var tempPlayers = $("iframe.yt_players");
-		for (var i = 0; i < players.length; i++) {
+		for (var i = 0; i < tempPlayers.length; i++) {
 			if (players[i].getVideoUrl() != temp) players[i].stopVideo();
 
 		}
