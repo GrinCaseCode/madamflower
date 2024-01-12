@@ -2934,6 +2934,38 @@
 	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/mask/jquery.maskedinput.js"></script>
 	<script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+	<script>
+		players = new Array();
+
+function onYouTubeIframeAPIReady() {
+	var temp = $("iframe.yt_players");
+	for (var i = 0; i < temp.length; i++) {
+		var t = new YT.Player($(temp[i]).attr('id'), {
+			events: {
+				'onStateChange': onPlayerStateChange
+			}
+		});
+		players.push(t);
+	}
+
+}
+onYouTubeIframeAPIReady();
+
+
+function onPlayerStateChange(event) {
+
+	if (event.data == YT.PlayerState.PLAYING) {
+		//alert(event.target.getVideoUrl());
+	   // alert(players[0].getVideoUrl());
+		var temp = event.target.getVideoUrl();
+		var tempPlayers = $("iframe.yt_players");
+		for (var i = 0; i < tempPlayers.length; i++) {
+			if (players[i].getVideoUrl() != temp) players[i].stopVideo();
+
+		}
+	}
+}
+	</script>
 	<script src="libs/ion.rangeSlider-master/js/ion.rangeSlider.min.js"></script>
 	<script src="libs/modal-video/jquery-modal-video.min.js"></script>
 	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
